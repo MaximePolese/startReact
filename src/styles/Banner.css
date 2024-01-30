@@ -17,3 +17,8 @@
     height: 45px;
     width: 45px;
 }
+
+p {
+    padding: 12px 32px;
+    margin: 0;
+}
