@@ -1,6 +1,13 @@
+import '../styles/Banner.css'
+import logo from '../assets/logo.png'
+
 function Header() {
     const title = "la maison jungle"
-    return (<h1>{title.toUpperCase()}</h1>)
+    return (
+        <div className='lmj-banner'>
+            <img src={logo} alt='La maison jungle' className='lmj-logo'/>
+            <h1 className='lmj-title'>{title}</h1>
+        </div>)
 }
 
 function Description() {
