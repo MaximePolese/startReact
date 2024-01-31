@@ -28,7 +28,7 @@ function CareScale({scaleValue, careType}) {
     }
 
     return (
-        <div onClick={() => handleClick(scaleValue, careType)}>
+        <div style={{cursor: "pointer"}} onClick={() => handleClick(scaleValue, careType)}>
             {range.map((rangeElem) => scaleValue >= rangeElem ?
                 (<span key={rangeElem.toString()}>{scaleType}</span>) : null
             )}
