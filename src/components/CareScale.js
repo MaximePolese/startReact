@@ -10,8 +10,25 @@ function CareScale({scaleValue, careType}) {
         <img src={Water} alt='water-icon'/>
     )
 
+    function handleClick(scaleValue, careType) {
+        let result = ""
+        if (scaleValue === 1) {
+            result = "peu"
+        } else if (scaleValue === 2) {
+            result = "modérement"
+        } else if (scaleValue === 3) {
+            result = "beaucoup"
+        }
+
+        if (careType === 'light') {
+            alert("Cette plante requiert " + result + " de lumière")
+        } else {
+            alert("Cette plante requiert " + result + " d'arrosage")
+        }
+    }
+
     return (
-        <div>
+        <div onClick={() => handleClick(scaleValue, careType)}>
             {range.map((rangeElem) => scaleValue >= rangeElem ?
                 (<span key={rangeElem.toString()}>{scaleType}</span>) : null
             )}
