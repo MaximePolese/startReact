@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import '../styles/Footer.css'
 import QuestionForm from "./QuestionForm";
+import Recommendation from "./Recommendation";
 
 function Footer() {
     const [inputValue, setInputValue] = useState('Tapez votre email ...')
@@ -16,6 +17,7 @@ function Footer() {
             <div className='lmj-footer-elem'>
                 Pour les passionné·e·s de plantes 🌿🌱🌵
             </div>
+            <Recommendation/>
             <div className='lmj-footer-elem'>
                 Laissez-nous votre mail :
             </div>

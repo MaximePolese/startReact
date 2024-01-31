@@ -1,6 +1,5 @@
 import '../styles/Banner.css'
 import logo from '../assets/logo.png'
-import Recommendation from './Recommendation'
 
 function Header() {
     const title = "la maison jungle"
@@ -20,7 +19,6 @@ function Banner() {
     return (<div>
         <Header/>
         <Description/>
-        <Recommendation/>
     </div>)
 }
 

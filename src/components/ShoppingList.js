@@ -1,23 +1,13 @@
 import {plantList} from '../datas/plantList'
 import '../styles/ShoppingList.css'
 import PlantItem from './PlantItem'
+import Categories from './Categories'
 
 function ShoppingList({cart, updateCart}) {
 
-    const categories = [];
-    plantList.forEach(function (plant) {
-        if (!categories.includes(plant.category)) {
-            categories.push(plant.category);
-        }
-    })
-
     return (
         <div className='lmj-shopping-list'>
-            <ul>
-                {categories.map((category) => (
-                    <li key={category}>{category}</li>
-                ))}
-            </ul>
+            <Categories/>
             <ul className='lmj-plant-list'>
                 {plantList.map(({id, cover, name, water, light, isBestSale, isSpecialOffer, price}) => (
                     <PlantItem
