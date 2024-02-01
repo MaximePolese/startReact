@@ -7,7 +7,8 @@ import './styles/Layout.css';
 import {useState} from "react";
 
 function App() {
-    const [cart, updateCart] = useState([])
+    const savedCart = JSON.parse(localStorage.getItem('cart'));
+    const [cart, updateCart] = useState(savedCart ? savedCart : [])
 
     return (
         <div>

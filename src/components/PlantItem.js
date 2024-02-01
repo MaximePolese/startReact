@@ -20,6 +20,7 @@ function PlantItem({id, cover, name, water, light, isBestSale, isSpecialOffer, p
 
     return (
         <li key={id} className='lmj-plant-item'>
+            <span className='lmj-plant-item-price'>{price}€</span>
             <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`}
                  onClick={() => addToCart(name, price)}/>
             <div>
